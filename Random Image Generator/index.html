@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Random Image Generator</h2>
+    <div class="img-container">
+        <img src="https://picsum.photos/400?random=1">
+        <img src="https://picsum.photos/400?random=2">
+        <img src="https://picsum.photos/400?random=3">
+        <img src="https://picsum.photos/400?random=4">
+        <img src="https://picsum.photos/400?random=5">
+        <img src="https://picsum.photos/400?random=6">
+    </div>
+    <div id="lightbox" class="hidden">
+        <span id="closeBtn">&times;</span>
+        <img id="lightboxImg" src="" alt="Big image">
+      </div>
+    <button class="btn">Load More</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

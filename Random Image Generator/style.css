@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightpink;
+    font-family: Arial, sans-serif;
+    
+}
+
+h2
+{
+    font-size: 50px;
+    color: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: double;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+/* Styling for the image container */
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 1260px; /* 3 images x 400px + gaps */
+}
+
+/* Each image */
+.img-container img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: lightgray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+    transform: scale(1.03);
+}
+
+/* Button styling */
+.btn {
+    padding: 12px 24px;
+    margin: 30px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: darkgrey;
+    color: darkred;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(175, 157, 175);
+}
+
+/* Lightbox full-screen viewer */
+.hidden {
+    display: none;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Only when 'show' class is added */
+#lightbox.show {
+    display: flex;
+}
+
+
+/* Image inside the lightbox */
+#lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 10px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Close (X) Button */
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+
